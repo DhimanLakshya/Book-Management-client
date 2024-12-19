@@ -5,13 +5,14 @@ import { RxCross1 } from "react-icons/rx";
 import { RiResetLeftFill } from "react-icons/ri";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
+import {Server_URL} from './URL'
 
 export default function Registration({ setOtpAuth }) {
-
+  
+  
   const [value, setValue] = useState({})
-
+console.log(`${Server_URL}RegisterUser`);
   const Navigator = useNavigate()
-
   const signUpData = (e) => {
     e.preventDefault();
     setValue({ ...value, [e.target.name]: e.target.value });
@@ -20,7 +21,7 @@ export default function Registration({ setOtpAuth }) {
   const BDRegitration = async (e) => {
     e.preventDefault();
     try {
-      const url = 'http://localhost:8080/RegisterUser';
+      const url = `${Server_URL}RegisterUser`;
 
       const signup = await axios.post(url, value)
       const userid = signup.data.id

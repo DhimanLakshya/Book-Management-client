@@ -1,0 +1,1 @@
+export const Server_URL = 'https://book-management-server-svs7.onrender.com/'
