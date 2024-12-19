@@ -5,7 +5,7 @@ import { IoIosLogIn } from "react-icons/io";
 
 export default function Navbar() {
   return (
-    <nav className='fixed flex justify-between py-1 w-full bg-gradient-to-r from-[#02b69b] via-[#0f3a35] to-[#018066]'>
+    <nav className=' relative flex justify-between py-1 w-full bg-gradient-to-r from-[#02b69b] via-[#0f3a35] to-[#018066]'>
       {/* Left div */}
       <a href='/'>
       <div className='flex h-10 w-25'><img src={logo} alt="logo" />
