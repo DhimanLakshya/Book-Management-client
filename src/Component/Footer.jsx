@@ -55,52 +55,28 @@ export default function Footer() {
         {/*upper Div */}
         <div className=' flex flex-col pt-5 pl-5 pr-5 relative '>
             <div className='flex  bg-white shadow-2xl shadow-[#3b3a3a] rounded-2xl'>
-            <div className='w-[600px]'>
-            <div className='flex pl-6 h-60 sm:justify-center mt-1'><img src={logo} alt="logo" /></div>
-            <div className='flex text-[20px] py-1 pl-[110px] font-bold text-black '>ज्ञान Shalla</div>
+            <div className=' w-[400px] h-[300px]'>
+            <div className='flex pl-4 h-64  '><img src={logo} alt="logo" /></div>
+            <div className='flex text-[20px] justify-center font-bold text-black '>ज्ञान Shalla</div>
             </div>
-            <div className='w-[1420px] pr-4 items-center pt-7   '>
-                <p><b> ज्ञान Shalla</b> is a virtual repository of learning resources which is not
+            <div className='w-full sm:w-[800px] pr-4 items-center py-5   '>
+                <p className='flex flex-col'><b> ज्ञान Shalla</b> is a virtual repository of learning resources which is not
                 just a repository with search/browse facilities but provides a host of services for the learner community.
                 Filtered and federated searching is 
                 employed to facilitate focused searching so that learners can find the right resource with least effort and
-                in minimum time. <b> ज्ञान Shalla</b> provides user group-specific services such as Examination Preparatory for School and 
-                College students and job aspirants. Services for Researchers and general learners are also provided.  <b> ज्ञान Shalla</b> 
+                in minimum time.</p>
+                <p className='flex flex-col max-sm:hidden max-sm:'> ज्ञान Shalla  provides user group-specific services such as Examination Preparatory for School and 
+                College students and job aspirants. Services for Researchers and general learners are also provided. ज्ञान Shalla
                 is designed to hold content of any language and provides interface support for 10 most widely used Indian 
                 languages. It is built to provide support for all academic levels including researchers and life-long 
-                learners, all disciplines, all popular forms of access devices and differently-abled learners. It is 
-                designed to enable people to learn and prepare from best practices from all over the world and to facilitate 
-                researchers to perform inter-linked exploration from multiple sources.</p>
+                learners, all disciplines, all popular forms of access devices and differently-abled learners.</p>
             </div>
-                <div className='flex h-[300px] w-[600px] '>
-                    <img className='flex rounded-r-2xl' src={image} alt="pic" />
+                <div className='flex  max-sm:hidden '>
+                    <img className='flex rounded-r-2xl w-full h-[304px]' src={image} alt="pic" />
                 </div>
             </div>
         </div>
-        <div className=' flex flex-col pt-5 pl-5 pr-5 relative '>
-            <div className='flex  bg-white shadow-2xl shadow-[#3b3a3a] rounded-2xl'>
-            <div className='w-[600px]'>
-            <div className='flex pl-6 h-60 sm:justify-center mt-1'><img src={logo} alt="logo" /></div>
-            <div className='flex text-[20px] py-1 pl-[110px] font-bold text-black '>ज्ञान Shalla</div>
-            </div>
-            <div className='w-[1420px] pr-4 items-center pt-7   '>
-                <p><b> ज्ञान Shalla</b> is a virtual repository of learning resources which is not
-                just a repository with search/browse facilities but provides a host of services for the learner community.
-                Filtered and federated searching is 
-                employed to facilitate focused searching so that learners can find the right resource with least effort and
-                in minimum time. <b> ज्ञान Shalla</b> provides user group-specific services such as Examination Preparatory for School and 
-                College students and job aspirants. Services for Researchers and general learners are also provided.  <b> ज्ञान Shalla</b> 
-                is designed to hold content of any language and provides interface support for 10 most widely used Indian 
-                languages. It is built to provide support for all academic levels including researchers and life-long 
-                learners, all disciplines, all popular forms of access devices and differently-abled learners. It is 
-                designed to enable people to learn and prepare from best practices from all over the world and to facilitate 
-                researchers to perform inter-linked exploration from multiple sources.</p>
-            </div>
-                <div className='flex h-[300px] w-[600px] '>
-                    <img className='flex rounded-r-2xl' src={image} alt="pic" />
-                </div>
-            </div>
-        </div>
+        
     </div>
   )
 }

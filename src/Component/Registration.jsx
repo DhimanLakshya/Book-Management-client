@@ -48,7 +48,7 @@ console.log(`${Server_URL}RegisterUser`);
           </div>
           <div className='flex justify-evenly p-2 pt-5'>
             <div className='pl-32'>Name: </div>
-            <input onChange={signUpData} className='shadow-lg w-full ml-3' name='First_Name' type="text" placeholder='First Name' />
+            <input onChange={signUpData} className='shadow-lg w-full ml-3' name='First_Name' type="text" placeholder='First Name' required="true"/>
             <input onChange={signUpData} className='shadow-lg w-full' name='Last_Name' type="text" placeholder='Last_Name' />
           </div>
           <div className='flex p-3  '>
