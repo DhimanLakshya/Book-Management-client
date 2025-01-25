@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+
+.oleo-script-regular {
+    font-family: "Oleo Script", serif;
+}
+

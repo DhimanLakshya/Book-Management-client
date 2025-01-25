@@ -13,16 +13,20 @@ import { IoIosLogIn } from "react-icons/io";
 
 export default function Login() {
     const [value, setValue] = useState({})
-    const loginData =(e)=>{
+    const loginData = (e) => {
         e.preventDefault();
-        setValue({...value,[e.target.name]:e.target.value})//spread operator
+        setValue({ ...value, [e.target.name]: e.target.value })//spread operator
     }
     console.log(value);
 
     return (
 
         <div className='flex flex-col shadow-2xl xl mt-8 ml-[500px] rounded-lg bg-[#eaf3e5]  w-[500px] h-[350px]'>
-            <div className='flex p-4 text-xl text-black shadow-md'><MdOutlineLogin className='text-3xl ' />Log-in</div>
+            <div className='flex p-4 text-xl  justify-between text-black shadow-md'>
+                <div className=' flex w-[100px]'><MdOutlineLogin className='text-3xl ' />Log-in</div>
+                <div className=' gap-5 justify-end items-end  '><a href="/Body"><RxCross1 /></a></div>
+            </div>
+
             <div>
                 <div className='flex p-4 text-md  text-black shadow-md items-center'><MdEmail className='text-2xl ' />Email
                     <input onChange={loginData} className='ml-4 mr-4 w-full bg-[#eaf3e5]' name='Email' type="text" />

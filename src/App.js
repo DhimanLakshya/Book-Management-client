@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom'
-import { Navbar, Body, Login, About, Registration, OtpVerification } from './Component/AllComponent'
+import { Navbar,AppearCard,Body, MainHome, About, Registration, OtpVerification,ViewCategories } from './Component/AllComponent'
 
 export default function App() {
 
@@ -15,9 +15,11 @@ export default function App() {
       <Navbar />
       <Routes>
         {/* Public Component */}
-        <Route path='/' element={<Body />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/Body' element={<Body />} />
+        <Route path='/' element={<AppearCard />} />
+        <Route path='/login' element={<MainHome />} />
         <Route path='/about' element={<About />} />
+        <Route path='/ViewCategories' element={<ViewCategories />} />
 
         <Route path='/registration' element={<Registration setOtpAuth={setOtpAuth} />} />
 

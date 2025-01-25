@@ -37,7 +37,8 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="relative bg-white flex flex-col items-center">
+    
+    <div className=" relative bg-white flex flex-col items-center">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -48,7 +49,7 @@ const Banner = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center p-6 md:p-12">
+      <div className="relative  text-center p-6 md:p-12">
         <h1 className="text-2xl md:text-6xl font-bold text-gray-800 ">
           Learning <span className="text-orange-500">Never Ends..</span>
         </h1>

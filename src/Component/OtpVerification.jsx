@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import axios from 'axios';
+import { useNavigate,useParams } from 'react-router-dom';
+import {Server_URL} from './URL'
 
 const OtpVerification = () => {
+  const Navigator = useNavigate()
+
   const [otp, setOtp] = useState(Array(4).fill(""));
 
   const handleChange = (e, index) => {
@@ -25,7 +30,24 @@ let otpNumber = {
     "OTP":otp.join('')
 }
 
-console.log(otpNumber);
+
+const {userId} = useParams()
+
+
+const OtpVerification = async (e) => {
+  e.preventDefault();
+  try {
+    const url = `${Server_URL}otpVerification/${userId}`;
+
+    const signup = await axios.post(url, otpNumber)
+
+    if (signup.status === false) alert("Invalid Data")
+    else {
+      Navigator(`/login`)
+    }
+  }
+  catch (e) { alert(e.response.data.msg) }
+}
 
 
   return (
@@ -48,6 +70,7 @@ console.log(otpNumber);
             ))}
           </div>
           <button
+          onClick={OtpVerification}
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded mt-4 hover:bg-blue-600"
           >
